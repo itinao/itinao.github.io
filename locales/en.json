@@ -1,0 +1,89 @@
+{
+  "links": {
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills",
+    "interests": "Interests",
+    "projects": "Projects"
+  },
+  "personalInfo": {
+      "name": "iti",
+      "lastName": "nao",
+      "subHeadingText": [
+        "Software Enginneer",
+        "Full Stack Developer",
+        "Code enthusiast!"
+      ],
+      "city": "Tokyo, Japan",
+      "email": "itinao@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/itinao/",
+      "github": "https://github.com/itinao/",
+      "myDescription": "Passionate web developer, making useful application using the latest technologies!"
+  },
+  "workExperiences": {
+    "title": "Work Expecience 🔨",
+    "works": [
+      {
+        "position": "Software Engineer / FullStack Developer",
+        "companie": "xxx",
+        "responsabilities": [
+          "Responsible for web ecommerce developing and maintaining.",
+          "Web Team leader, I take technical decisions about which technologies use in each project and how the team will works.",
+          "Backend Developer: Ruby 2.x | Ruby on Rails 4.x, 5.x, 6.x | MSSQL 5.x | Docker.",
+          "Frontend Developer: VueJs | jQuery | Javascript."
+        ],
+        "startEndDate": "January 2019 - Present"
+      },
+      {
+        "position": "Software Engineer / FullStack Developer / Unity Developer",
+        "companie": "xxx",
+        "responsabilities": [
+          "Responsible for mobile phone game developing and maintaining.",
+          "Backend Developer: PHP 5.x | Python 3.x | MSSQL 5.x.",
+          "Frontend Developer: Knockout.js | Javascript.",
+          "Unity Developer: Unity 5.x | C#."
+        ],
+        "startEndDate": "August 2012 - December 2019"
+      },
+      {
+        "position": "Software Engineer / FullStack Developer",
+        "companie": "xxx",
+        "responsabilities": [
+          "Responsible for developing and maintaining.",
+          "Backend Developer: PHP 5.x | Perl | MSSQL 5.x. | VMWare",
+          "Frontend Developer: jQuery | Javascript."
+        ],
+        "startEndDate": "April 2008 - July 2012"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills 🎯",
+    "iconsTitle": "Programming Languages & Tools",
+    "devIcons": [
+      "devicon-csharp-plain",
+      "devicon-javascript-plain",
+      "devicon-html5-plain-wordmark",
+      "devicon-css3-plain-wordmark",
+      "devicon-git-plain",
+      "devicon-ruby-plain",
+      "devicon-nodejs-plain",
+      "devicon-bootstrap-plain",
+      "devicon-github-original",
+      "devicon-bitbucket-original-wordmark",
+      "devicon-dot-net-original-wordmark",
+      "devicon-jquery-plain-wordmark",
+      "devicon-linux-plain",
+      "devicon-visualstudio-plain",
+      "devicon-vuejs-plain"
+    ],
+    "workflow": "Workflow",
+    "itemList": [
+      "Cross Browser Testing & Debugging",
+      "REST API building",
+      "Agile Development & Scrum",
+      "Team working"
+    ]
+  }
+}
