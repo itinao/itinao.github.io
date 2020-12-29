@@ -1,75 +1,103 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        itinao.github.io
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <section>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+    >
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Resume Iván</span>
+        <span class="d-none d-lg-block">
+          <img
+            class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            src="https://avatars3.githubusercontent.com/u/759472?s=460&v=4"
+            alt=""
+          />
+        </span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link js-scroll-trigger"
+              @click="jumpTo('#about')"
+              href="#"
+              >{{ $t('links.about') }}</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link js-scroll-trigger"
+              @click="jumpTo('#experience')"
+              href="#"
+              >{{ $t('links.experience') }}</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link js-scroll-trigger"
+              @click="jumpTo('#skills')"
+              href="#"
+              >{{ $t('links.skills') }}</a
+            >
+          </li>
+          <li class="nav-item">
+            <div style="position:fixed; bottom:10px; left:10px; z-index:1000;">
+              <DarkModeBtn />
+            </div>
+          </li>
+        </ul>
       </div>
+    </nav>
+
+    <div class="resume">
+      <Resume />
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Resume from '@/components/Resume'
+import DarkModeBtn from '@/components/DarkModeBtn'
+import jump from 'jump.js'
 
-export default Vue.extend({})
+export default {
+  components: {
+    Resume,
+    DarkModeBtn
+  },
+  head() {
+    return {
+      title: "itinao"
+    };
+  },
+  methods: {
+    jumpTo(element: HTMLElement) {
+      jump(element);
+    }
+  }
+};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style scoped>
+h1 {
+  font-size: 3rem;
+  line-height: 5.5rem;
 }
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@media (min-width: 992px) {
+  .resume {
+    padding-top: 0;
+    padding-left: 17rem;
+  }
 }
 </style>
