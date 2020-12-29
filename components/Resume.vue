@@ -1,15 +1,15 @@
 <template>
   <section id="page-top">
     <div class="container-fluid p-0">
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+      <section id="about" class="resume-section p-3 p-lg-5 d-flex d-column">
         <Presentation />
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <section id="experience" class="resume-section p-3 p-lg-5 d-flex flex-column">
         <Experience />
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+      <section id="skills" class="resume-section p-3 p-lg-5 d-flex flex-column">
         <Skills />
       </section>
     </div>
@@ -17,10 +17,13 @@
 </template>
 
 <script lang="ts">
-import jump from "jump.js"
-import Presentation from "../components/Sections/Presentation"
-import Experience from "../components/Sections/Experience"
-import Skills from "../components/Sections/Skills"
+// @ts-ignore
+import Presentation from '@/components/Sections/Presentation'
+// @ts-ignore
+import Experience from '@/components/Sections/Experience'
+// @ts-ignore
+import Skills from '@/components/Sections/Skills'
+
 export default {
   components: {
     Presentation,

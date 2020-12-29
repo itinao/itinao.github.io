@@ -18,7 +18,7 @@
         erase-style="backspace"
         :erase-on-complete="false"
         caret-animation="blink"
-      ></vue-typer>
+      />
     </h3>
 
     <div class="subheading mb-5">
@@ -50,8 +50,8 @@
       <li class="list-inline-item">
         <a target="blank" :href="$t('personalInfo.github')">
           <span class="fa-stack fa-lg">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fab fa-github-alt fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-circle fa-stack-2x" />
+            <i class="fab fa-github-alt fa-stack-1x fa-inverse" />
           </span>
         </a>
       </li>
@@ -61,7 +61,7 @@
 
 <script lang="ts">
 export default {
-  data() {
+  data () {
     return {}
   }
 }

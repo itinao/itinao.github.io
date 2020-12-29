@@ -1,12 +1,16 @@
 <template>
   <div class="container">
-    <el-button @click="visible = true">Button</el-button>
+    <el-button @click="visible = true">
+      Button
+    </el-button>
     <el-dialog :visible.sync="visible" title="Hello world">
       <p>Try Element</p>
     </el-dialog>
 
     <p>{{ ip }}</p>
-    <button @click="getIp">IPアドレス取得</button>
+    <button @click="getIp">
+      IPアドレス取得
+    </button>
 
     <input placeholder="hogehoge" @keyup.enter="addTodo" />
     <ul>
@@ -27,20 +31,20 @@ export default {
       return this.$store.state.todos.list
     }
   },
-  data: function() {
+  data: function () {
     return {
       visible: false,
       ip: '0.0.0.0'
     }
   },
   methods: {
-    async getIp() {
+    async getIp () {
       this.ip = await this.$axios.$get('http://icanhazip.com/')
     },
-    addTodo(e) {
+    addTodo (e) {
       this.$store.commit('todos/add', e.target.value)
     },
-    ...mapMutations({
+    ...mapMutations ({
       toggle: 'todos/toggle'
     })
   }

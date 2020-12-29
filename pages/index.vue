@@ -1,8 +1,8 @@
 <template>
   <section>
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
     >
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Resume Iván</span>
@@ -23,7 +23,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" />
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
@@ -67,7 +67,9 @@
 </template>
 
 <script lang="ts">
+// @ts-ignore
 import Resume from '@/components/Resume'
+// @ts-ignore
 import DarkModeBtn from '@/components/DarkModeBtn'
 import jump from 'jump.js'
 
@@ -76,17 +78,17 @@ export default {
     Resume,
     DarkModeBtn
   },
-  head() {
+  head () {
     return {
-      title: "itinao"
-    };
+      title: 'itinao'
+    }
   },
   methods: {
-    jumpTo(element: HTMLElement) {
-      jump(element);
+    jumpTo (element: HTMLElement) {
+      jump(element)
     }
   }
-};
+}
 </script>
 
 <style scoped>
