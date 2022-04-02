@@ -1,3 +1,12 @@
+const gaId = 'G-KX51GJ8KT8';
+const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+const gaScripts = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaId}');
+`
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -53,7 +62,19 @@ export default {
           'sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt',
         crossorigin: 'anonymous'
       }
-    ]
+    ],
+    script: [
+      {
+        async: true,
+        src: gaSrc
+      }, {
+        hid: 'gaScript',
+        innerHTML: gaScripts
+      }
+    ],
+    __dangerouslyDisableSanitizersByTagID: {
+      'gaScript': ['innerHTML']
+    }
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
